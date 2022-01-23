@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ApplicationService.DTOs" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAuthors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAuthors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostAuthor_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostAuthor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostAuthor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostAuthorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAuthorByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAuthorByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteAuthor_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAuthor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteAuthor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAuthorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSongs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSongs" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSongs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSongsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostSongs_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostSongs" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostSongs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostSongsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSongByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSongByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSongByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSongByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteSong_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSong" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteSong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSongResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAlbums_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlbums" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAlbums_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlbumsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostAlbums_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostAlbums" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostAlbums_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostAlbumsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAlbumByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlbumByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAlbumByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlbumByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAlbum" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAlbumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAuthors" message="tns:IService1_GetAuthors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAuthorsResponse" message="tns:IService1_GetAuthors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostAuthor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PostAuthor" message="tns:IService1_PostAuthor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PostAuthorResponse" message="tns:IService1_PostAuthor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAuthorByID" message="tns:IService1_GetAuthorByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAuthorByIDResponse" message="tns:IService1_GetAuthorByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuthor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteAuthor" message="tns:IService1_DeleteAuthor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteAuthorResponse" message="tns:IService1_DeleteAuthor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSongs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSongs" message="tns:IService1_GetSongs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSongsResponse" message="tns:IService1_GetSongs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostSongs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PostSongs" message="tns:IService1_PostSongs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PostSongsResponse" message="tns:IService1_PostSongs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSongByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSongByID" message="tns:IService1_GetSongByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSongByIDResponse" message="tns:IService1_GetSongByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSong">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteSong" message="tns:IService1_DeleteSong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteSongResponse" message="tns:IService1_DeleteSong_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlbums">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAlbums" message="tns:IService1_GetAlbums_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAlbumsResponse" message="tns:IService1_GetAlbums_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostAlbums">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PostAlbums" message="tns:IService1_PostAlbums_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PostAlbumsResponse" message="tns:IService1_PostAlbums_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlbumByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAlbumByID" message="tns:IService1_GetAlbumByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAlbumByIDResponse" message="tns:IService1_GetAlbumByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteAlbum" message="tns:IService1_DeleteAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteAlbumResponse" message="tns:IService1_DeleteAlbum_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthors">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAuthors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostAuthor">
+      <soap:operation soapAction="http://tempuri.org/IService1/PostAuthor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAuthorByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuthor">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteAuthor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSongs">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSongs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostSongs">
+      <soap:operation soapAction="http://tempuri.org/IService1/PostSongs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSongByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSongByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSong">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteSong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlbums">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAlbums" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostAlbums">
+      <soap:operation soapAction="http://tempuri.org/IService1/PostAlbums" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlbumByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAlbumByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAlbum">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WcfService/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
